@@ -16,6 +16,6 @@ class AttemptTest < ActiveSupport::TestCase
     level   = Level.new(title: "Level 1", text: level_text)
     attempt = level.attempts.new(text: attempt_text)
     
-    assert_equal 95, attempt.percent
+    assert_equal 95, attempt.percent_correct
   end
 end
