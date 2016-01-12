@@ -1,0 +1,12 @@
+<h2><%= @level.title %></h2>
+<p>Type the text you see below:</p>
+<div class="highlight">
+  <p><%= @level.text %></p>
+</div>
+
+<%= form_for([@level, @attempt]) do |f| %>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+
+  <%= f.submit "Score" %>
+<% end %>
