@@ -13,9 +13,9 @@ class AttemptTest < ActiveSupport::TestCase
     level_text   = "Here is a typing test."
     attempt_text = "Here is a typing text."
 
-    level   = Level.new(title: "Level 1", text: level_text)
+    level   = Level.create(title: "Level 1", text: level_text)
     attempt = level.attempts.new(text: attempt_text)
-    
+
     assert_equal 95, attempt.percent_correct
   end
 end
